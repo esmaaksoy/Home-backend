@@ -11,9 +11,6 @@ function isValidURL(string) {
     return false;
   }
 }
-function imageNumber(image) {
-  return image.length <= 4;
-}
 
 const productCategorySchema = new mongoose.Schema(
   {
@@ -40,18 +37,22 @@ const productShema = new mongoose.Schema({
   rating: { type: Number, required: true },
   stock: { type: Number, required: true },
   brand: { type: String, trim: true, required: true },
-  thumbnail: { type: String, trim: true, required: true, validate: [{ validator: isValidURL, message: "URL must be required" }] 
+  thumbnail: {
+    type: String,
+    trim: true,
+    required: true,
+    validate: { validator: isValidURL, message: "URL must be required" },
   },
- 
+
   images: [
     {
       type: String,
       trim: true,
       required: true,
-      validate: [
-        { validator: isValidURL, message: "URL must be required" },
-        { validator: imageNumber, message: "restricted by 3 images " },
-      ],
+      validate: {
+        validator: isValidURL,
+        message: "URL must be required",
+      },
     },
   ],
 });
