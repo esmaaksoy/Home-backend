@@ -3,11 +3,11 @@
 const router = require("express").Router()
 const {Products,ProductCategories} = require("../controllers/productsController")
 
-router.route("/").post(Products.create)
-router.route("/:id").get(Products.read)
+router.route("/category").get(ProductCategories.list)
+router.route("/category/:categoryName").get(Products.findByCategory)
 
-router.route("/category")
-router.route("/category/:name")
+router.route("/").get(Products.list)
+router.route("/:productId").get(Products.read)
 
 
 module.exports = router

@@ -50,12 +50,14 @@ app.use("/users", require("./src/routes/userRoutes"));
 
 app.use("/admin", require("./src/routes/adminRoutes"));
 
-//ErrorHandler
 
+//ErrorHandler
 app.use(require("./src/middlewares/errorHandler"))
 
-
+//Listen PORT
 
 app.listen(PORT, () =>
   console.log(` Server Running on http://${HOST}:${PORT}`)
 );
+
+// require('./src/sync')()
