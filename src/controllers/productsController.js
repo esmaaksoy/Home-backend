@@ -4,8 +4,12 @@ const { Products, ProductCategories } = require("../models/productsModel");
 
 module.exports.ProductCategories = {
   list: async (req, res) => {
-    const data = await ProductCategories.find();
-    res.status(200).send({ error: false, data: data });
+    const data = await res.getModelList(ProductCategories);
+    res.status(200).send({ 
+      error: false, 
+      details: await res.getModelListDetails(ProductCategories),
+      data: data 
+    });
   },
   create: async (req, res) => {
     const data = await ProductCategories.create(req.body);
@@ -23,9 +27,10 @@ module.exports.ProductCategories = {
 
 module.exports.Products = {
   list: async (req, res) => {
-    const data = await Products.find().populate('category',"name-_id");;
+    const data = await res.getModelList(Products,'category',"name-_id");
     res.status(200).send({
       error: false,
+      details: await res.getModelListDetails(Products),
       data: data,
     });
   },

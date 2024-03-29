@@ -22,6 +22,7 @@ app.use(
 );
 
 app.use(require("./src/middlewares/userControl"));
+app.use(require("./src/middlewares/queryHandler"))
 
 //Routes
 
@@ -51,8 +52,10 @@ app.use("/users", require("./src/routes/userRoutes"));
 app.use("/admin", require("./src/routes/adminRoutes"));
 
 
-//ErrorHandler
+//Middleware
 app.use(require("./src/middlewares/errorHandler"))
+
+
 
 //Listen PORT
 
