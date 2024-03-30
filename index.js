@@ -21,7 +21,7 @@ app.use(
   })
 );
 
-app.use(require("./src/middlewares/userControl"));
+// app.use(require("./src/middlewares/auth"));
 app.use(require("./src/middlewares/queryHandler"))
 
 //Routes

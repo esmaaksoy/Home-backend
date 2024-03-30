@@ -15,10 +15,10 @@ module.exports = {
         req.session.email = user.email;
         req.session.password = user.password;
 
-        if (req.body?.remindMe) {
-          req.session.remindMe = req.body.remindMe;
-          req.sessionOptions.maxAge = 1000 * 60 * 60 * 24 * 2; //2 days
-        }
+              if (req.body?.remindMe) {
+              req.session.remindMe = req.body.remindMe;
+              req.sessionOptions.maxAge = 1000 * 60 * 60 * 24 * 2; //2 days
+              }
         res.status(200).send({
           error: false,
           message: "Login successfuly",

@@ -21,9 +21,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
       trim: true,
       require: true,
-      set: function (password) {
-        return passwordEncrypt(password);
-      },
+      set: (password) => passwordEncrypt(password),
     },
     firstName: String,
     lastName: String,
