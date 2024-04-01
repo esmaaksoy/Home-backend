@@ -1,25 +1,38 @@
 "use strict";
 
-const router = require("express").Router()
+const router = require("express").Router();
 
-const Admin = require("../controllers/adminController")
-const {Products,ProductCategories} = require("../controllers/productsController")
+const Admin = require("../controllers/adminController");
+const {
+  Products,
+  ProductCategories,
+} = require("../controllers/productsController");
 
-const auth = require('../middlewares/auth')
+const auth = require("../middlewares/auth");
 
-router.route('/')
-    .get(auth.isAdmin,Admin.list)
-    .post(auth.isAdmin,Admin.create)
-    
-router.route('/:userId')
-    .delete(auth.isAdmin,Admin.delete)
+router.use(auth.isAdmin);
 
-router.route("/products").get(auth.isAdmin,Products.list).post(auth.isAdmin,Products.create)
-router.route("/products/:productId").get(auth.isAdmin,Products.read).put(auth.isAdmin,Products.update).delete(auth.isAdmin,Products.delete)
-router.route("/products/categories").get(auth.isAdmin,ProductCategories.list)
-router.route("/products/category/:categoryName").get(auth.isAdmin,Products.findByCategory)
+router.route("/").get(Admin.list).post(Admin.create);
 
-router.route("/categories").get(auth.isAdmin,ProductCategories.list).post(auth.isAdmin,ProductCategories.create)
-router.route("/categories/:categoryId").get(auth.isAdmin,ProductCategories.read).put(auth.isAdmin,ProductCategories.update).delete(auth.isAdmin,ProductCategories.delete)
+router.route("/:userId").delete(Admin.delete);
 
-module.exports = router
+router.route("/products").get(Products.list).post(Products.create);
+router
+  .route("/products/:productId")
+  .get(Products.read)
+  .put(Products.update)
+  .delete(Products.delete);
+router.route("/products/categories").get(ProductCategories.list);
+router.route("/products/category/:categoryName").get(Products.findByCategory);
+
+router
+  .route("/categories")
+  .get(ProductCategories.list)
+  .post(ProductCategories.create);
+router
+  .route("/categories/:categoryId")
+  .get(ProductCategories.read)
+  .put(ProductCategories.update)
+  .delete(ProductCategories.delete);
+
+module.exports = router;
