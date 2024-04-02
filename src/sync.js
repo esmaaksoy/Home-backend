@@ -32,13 +32,13 @@ module.exports = async () => {
     });
     categories.push(category);
   }
-
+  const products = [];
   // Example Product:
-  for (let key in [...Array(200)]) {
+  for (let key in [...Array(20)]) {
     const randomCategoryIndex = Math.floor(Math.random() *  categories.length);
 
 
-    await Products.create({
+    const product = await Products.create({
       category: categories[randomCategoryIndex]._id,
       title: `home decor ${key}`,
       description: "home decor",
@@ -56,6 +56,7 @@ module.exports = async () => {
         "https://i.pinimg.com/564x/ea/c8/5d/eac85d4a2e50550ae71a5b8be522254c.jpg",
       ],
     });
+    products.push(product)
   }
   console.log("* Synchronized *");
 };
