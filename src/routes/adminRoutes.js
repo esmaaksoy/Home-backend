@@ -17,11 +17,13 @@ router.route("/").get(Admin.list).post(Admin.create);
 router.route("/:userId").delete(Admin.delete);
 
 router.route("/products").get(Products.list).post(Products.create);
+
 router
   .route("/products/:productId")
   .get(Products.read)
   .put(Products.update)
   .delete(Products.delete);
+
 router.route("/products/categories").get(ProductCategories.list);
 router.route("/products/category/:categoryName").get(Products.findByCategory);
 

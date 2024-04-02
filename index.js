@@ -12,8 +12,6 @@ const HOST = process.env.HOST;
 //DB connection
 require("./src/configs/dbConnection");
 
-const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3000/" }));
 const session = require("cookie-session");
 
 app.use(
