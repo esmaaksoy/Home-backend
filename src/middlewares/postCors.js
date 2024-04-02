@@ -6,7 +6,7 @@ const postCors = () => {
     methods: "POST",
   };
 
-  return cors(corsOptions)
+  cors(corsOptions);
 
 };
 
