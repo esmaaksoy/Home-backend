@@ -6,7 +6,7 @@ const User = require("../controllers/userController");
 
 const postCors = require("../middlewares/postCors");
 
-router.post("/login", postCors, User.login);
+router.post("/login", postCors(), User.login);
 
 router.get("/logout", User.logout);
 

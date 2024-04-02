@@ -2,11 +2,11 @@ const cors = require("cors");
 
 const postCors = () => {
   const corsOptions = {
-    origin: "*",
+    origin: "http://localhost:3000",
     methods: "POST",
   };
 
-  cors(corsOptions);
+  return cors(corsOptions);
 
 };
 
