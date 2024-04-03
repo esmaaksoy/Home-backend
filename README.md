@@ -1,3 +1,5 @@
+## Home Page
+
 ## Project Skeleton
 
 
@@ -33,6 +35,20 @@ Home Page/
   ├── package.json    // Node.js project configuration
   └── README.md       // Project documentation
 ```
+## Tech/framework used
+
+- **CRUD Operations**
+  Users can create, read, update, and delete books from the database.
+- **Middleware**
+  Middleware functions are implemented to handle requests, perform validations, and enhance security.
+- **CORS**
+  Cross-Origin Resource Sharing (CORS) is implemented to allow the frontend to communicate with the backend server.
+- **Express.js**
+  Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+- **Other Dependencies**
+  Various other dependencies are used for routing, middleware, and error handling.
+
+
 
 ## Project ERD
 
