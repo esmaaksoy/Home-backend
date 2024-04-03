@@ -36,17 +36,16 @@ Home Page/
   └── README.md       // Project documentation
 ```
 ## Tech/framework used
-
-- **CRUD Operations**
-  Users can create, read, update, and delete books from the database.
-- **Middleware**
-  Middleware functions are implemented to handle requests, perform validations, and enhance security.
-- **CORS**
-  Cross-Origin Resource Sharing (CORS) is implemented to allow the frontend to communicate with the backend server.
-- **Express.js**
-  Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-- **Other Dependencies**
-  Various other dependencies are used for routing, middleware, and error handling.
+- **Express.js:** Fast and flexible Node.js web application framework.
+- **MongoDB:** Flexible and scalable NoSQL database solution.
+- **Mongoose:** Object Data Modeling (ODM) library for MongoDB.
+- **Cookie-session:** Middleware for session management in Express applications.
+- **Cors:** Middleware for Cross-Origin Resource Sharing (CORS) in Express.
+- **Dotenv:** Node.js module used for loading environment variables.
+- **Express-async-errors:** Helper module for asynchronous error handling in Express applications.
+- **Mongoose-validator:** Powerful validation library for Mongoose.
+- **CRUD Operations** Users can create, read, update, and delete books from the database.
+- **Middleware** Middleware functions are implemented to handle requests, perform validations, and enhance security.
 
 
 
