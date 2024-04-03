@@ -2,7 +2,7 @@ const cors = require("cors");
 
 const getCors = () => {
   const corsOptions = {
-    origin: "*",
+    origin: "http://localhost:3000/",
     methods: "GET",
   };
 
