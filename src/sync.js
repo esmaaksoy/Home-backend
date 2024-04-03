@@ -40,13 +40,13 @@ module.exports = async () => {
 
     const product = await Products.create({
       category: categories[randomCategoryIndex]._id,
-      title: `home decor ${key}`,
-      description: "home decor",
-      price: 5 * key,
+      title: `Mundo Lounge ${key}`,
+      description: "Mundo Lounge is a product that offers a delightful experience to its customers with its modern design and cozy atmosphere. This lounge seating set enhances any space with its elegant lines and high-quality materials. With its plush cushions and spacious seating area, Mundo Lounge provides a comfortable seating experience while adding sophistication to any setting. Combining superior comfort with stylish design, Mundo Lounge is the perfect choice for creating a modern touch and inviting ambiance in your home or workspace.",
+      price: 255 * key,
       discountPercentage: (200 * 20) / 100,
-      rating: 4,
+      rating: 5,
       stock: key,
-      brand: "Ikea",
+      brand: "Mundo",
       thumbnail:
         "https://i.pinimg.com/564x/79/02/08/790208203c5dd25c12db3029f46882f4.jpg",
 
