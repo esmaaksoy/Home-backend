@@ -62,4 +62,4 @@ app.listen(PORT, () =>
   console.log(` Server Running on http://${HOST}:${PORT}`)
 );
 
-require('./src/sync')()
+// require('./src/sync')()
