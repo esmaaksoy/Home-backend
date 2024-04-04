@@ -94,4 +94,10 @@ _Below is an example of how you can instruct your audience on installing and set
    nodemon
    ```
  
+## İMPORTANT NOTES !
+
+To use the application, you can log in with the following email and password <br>
+email: admin@admin.com <br>
+password: Admin@1234 <br>
+
 
