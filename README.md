@@ -1,4 +1,6 @@
 ## Home Page
+This application aims to manage household items by categorizing them systematically. Session cookies are utilized for session management, with user information stored for three days.
+Admin Permissions: Upon logging in as an administrator, you can easily manage product and category operations. You have the capability to perform CRUD (Create, Read, Update, Delete) operations and customize the content as desired.
 
 ## Project Skeleton
 
